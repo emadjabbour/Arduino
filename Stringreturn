@@ -1,0 +1,22 @@
+String Name,Age;
+
+void setup() {
+Serial.begin(9600);
+Name = EnterString("Enter your Name");
+Age = EnterString("Enter your Age");
+
+Serial.println("thank you "+Name+" you are in the Age of " + Age);
+}
+
+void loop() {
+
+
+}
+
+String EnterString(String msg){
+  Serial.println(msg);
+  while(!Serial.available() > 0){
+  }
+  return  Serial.readStringUntil('\n');
+
+}
