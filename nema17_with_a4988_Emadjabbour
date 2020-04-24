@@ -1,0 +1,32 @@
+#define M1Dir 4
+#define Mot1Step 7
+int speed = 20;
+int steps = 3200;
+void setup() {
+pinMode(M1Dir, 1);
+pinMode(Mot1Step, 1);
+
+}
+
+void loop() {
+   digitalWrite(M1Dir, 1);   
+   for(int x = 0; x < steps; x++) {
+      digitalWrite(Mot1Step,HIGH);
+      delayMicroseconds(speed);
+      digitalWrite(Mot1Step,LOW);
+      delayMicroseconds(speed);
+      }
+      delay(1000);
+
+
+      
+   digitalWrite(M1Dir, 0);
+   for(int x = 0; x < steps; x++) {
+      digitalWrite(Mot1Step,HIGH);
+      delayMicroseconds(speed);
+      digitalWrite(Mot1Step,LOW);
+      delayMicroseconds(speed);
+      }
+    delay(1000);
+
+}
